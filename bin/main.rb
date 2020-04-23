@@ -44,6 +44,4 @@ end
 # To start game again
 puts 'Do you want to play again?'
 
-
-
 # rubocop:enable Style/Next
