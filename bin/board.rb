@@ -18,7 +18,13 @@ class Board
         puts "--+---+---"
         
     end
+
+    def full?
+        @field.all? { |cell| cell.class != Integer}
+    end
+    
 end
 
 board = Board.new
 board.show_board
+puts board.full?

@@ -4,6 +4,7 @@
 puts 'Welcome to the game of Tic Tac Toe!!'
 puts 'Player 1 what is your name?'
 player1 = gets.chomp
+
 puts "Welcome #{player1} choose your game symbol: X or O"
 player_1_symbol = gets.chomp
 # player 1 chooses "X or O"
