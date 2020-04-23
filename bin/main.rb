@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# rubocop:disable Style/Next
+
 puts 'Welcome to the game of Tic Tac Toe!!'
 puts 'Player 1 what is your name?'
 player1 = gets.chomp
@@ -41,3 +43,7 @@ while game_on
 end
 # To start game again
 puts 'Do you want to play again?'
+
+
+
+# rubocop:enable Style/Next
