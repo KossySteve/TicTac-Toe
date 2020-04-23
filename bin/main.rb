@@ -33,12 +33,10 @@ while game_on
   gets.chomp
   # Player 1 will play
   puts 'X or O' # at chosen position
-
   if winner || draw
     puts 'Its a draw~! or player1 wins! or player2 wins!'
     game_on = false
     puts 'Game Over'
-    break
   end
 end
 # To start game again
