@@ -7,4 +7,8 @@ class Game
        end
     end
 
+    def start_game
+        player1
+    end
+
 end
