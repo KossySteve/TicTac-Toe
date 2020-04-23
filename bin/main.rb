@@ -38,6 +38,7 @@ while game_on
     puts 'Its a draw~! or player1 wins! or player2 wins!'
     game_on = false
     puts 'Game Over'
+    break
   end
 end
 # To start game again
