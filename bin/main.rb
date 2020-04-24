@@ -2,9 +2,6 @@
 # rubocop:disable Style/GlobalVars
 # rubocop:disable Metrics/MethodLength
 # rubocop:disable Naming/VariableNumber
-# rubocop:disable Style/MultipleComparison
-
-
 
 require './lib/player.rb'
 require './lib/board.rb'
@@ -93,4 +90,3 @@ Game.new.play
 # rubocop:enable Style/GlobalVars
 # rubocop:enable Metrics/MethodLength
 # rubocop:enable Naming/VariableNumber
-# rubocop:enable Style/MultipleComparison
