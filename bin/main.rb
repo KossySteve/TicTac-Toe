@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
 # rubocop:disable Style/GlobalVars
-# rubocop:disable Metrics/Metrics/MethodLength
+# rubocop:disable Metrics/MethodLength
 # rubocop:disable Naming/VariableNumber
 # rubocop:disable Style/MultipleComparison
+
+
 
 require './lib/player.rb'
 require './lib/board.rb'
@@ -89,6 +91,6 @@ end
 Game.new.play
 
 # rubocop:enable Style/GlobalVars
-# rubocop:enable Metrics/Metrics/MethodLength
+# rubocop:enable Metrics/MethodLength
 # rubocop:enable Naming/VariableNumber
 # rubocop:enable Style/MultipleComparison
