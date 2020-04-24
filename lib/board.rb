@@ -9,22 +9,25 @@ class Board
         ]
     end
 
-    def show_board
+    def show
         puts "#{@field[0]} | #{@field[1]} | #{@field[2]}"
         puts "--+---+---"
         puts "#{@field[3]} | #{@field[4]} | #{@field[5]}"
         puts "--+---+---"
         puts "#{@field[6]} | #{@field[7]} | #{@field[8]}"
         puts "--+---+---"
-        
     end
 
     def full?
-        @field.all? { |cell| cell.class != Integer}
+        @field.all? { |cell| cell == 'X' or cell == 'O'}
     end
-    
-end
 
-board = Board.new
-board.show_board
-puts board.full?
+    def winner
+      winning_conditions = [ [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [2,4,6], [0,4,8] ]
+      winning_conditions.each do
+        |condition|
+        return 'X' if condition.all? { |cell| @field[cell] == 'X'}
+        return 'O' if condition.all? { |cell| @field[cell] == 'O'}
+      end
+    end
+end
