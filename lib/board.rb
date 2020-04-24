@@ -28,5 +28,6 @@ class Board
       return 'X' if condition.all? { |cell| @field[cell] == 'X' }
       return 'O' if condition.all? { |cell| @field[cell] == 'O' }
     end
+    false
   end
 end

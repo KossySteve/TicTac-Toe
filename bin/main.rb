@@ -37,8 +37,8 @@ class Game
     if @board.field[cell] == 'X' or @board.field[cell] == 'O' or pick.length != 1 or !pick == (1..9)
       puts 'invalid choice... pls choose positions not filled from 1 to 9'
     else
-    @board.field[cell] = player.symbol
-    @board.show
+      @board.field[cell] = player.symbol
+      @board.show
     end
   end
 
@@ -61,7 +61,6 @@ class Game
     end
     play_again
   end
-  
 
   def play_again
     puts 'Do you wanna play again... Yes or No ??'
@@ -72,7 +71,6 @@ class Game
       puts 'Thanks for playing'
     end
   end
-  
 
   def play
     start
