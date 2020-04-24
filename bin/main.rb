@@ -17,9 +17,9 @@ player_2_symbol = gets.chomp
 puts "Ok #{player2} you will be playing with #{player_2_symbol} as your symbol"
 
 # Display board
-puts '___1_|__2__|__3__'
-puts '___4_|__5__|__6__'
-puts '___7_|__8__|__9__'
+puts '__1__|__2__|__3__'
+puts '__4__|__5__|__6__'
+puts '__7__|__8__|__9__'
 
 # Start playing
 game_on = true
