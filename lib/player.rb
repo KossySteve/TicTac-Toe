@@ -5,7 +5,5 @@ class Player
   def initialize(name, symbol = nil)
     @name = name
     @symbol = symbol
-
   end
- 
 end
