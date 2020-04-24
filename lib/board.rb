@@ -34,4 +34,4 @@ class Board
   end
 end
 
-# rubocop:disable Style/MultipleComparison
+# rubocop:enable Style/MultipleComparison
