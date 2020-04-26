@@ -68,12 +68,14 @@ class Game
 
   def play_again
     puts 'Do you wanna play again... Yes or No ??'
+    valid_yes_answers = ["YES","Y"]
+    valid_no_answers = ["NO","N"]
     answer = gets.chomp.upcase
-    if answer == 'YES'
-      Game.new.play
-    else
-      puts 'Thanks for playing'
+    until valid_yes_answers.any? { |item| item == answer} || valid_no_answers.any? { |item| item == answer}
+      puts "Answer yes or no please!"
+      answer = gets.chomp.upcase
     end
+    Game.new.play if valid_yes_answers.any? { |item| item == answer}
   end
 
   def play
@@ -85,7 +87,7 @@ class Game
     game_over
   end
 end
-Game.new.play
+Game.new.play_again
 
 # rubocop:enable Style/GlobalVars
 # rubocop:enable Metrics/MethodLength
