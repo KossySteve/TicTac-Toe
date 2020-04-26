@@ -1,30 +1,26 @@
 #!/usr/bin/env ruby
-# rubocop:disable Style/GlobalVars
-# rubocop:disable Metrics/MethodLength
-# rubocop:disable Naming/VariableNumber
 
 require './lib/player.rb'
 require './lib/board.rb'
 
 class Game
+  @game_symbols = %w[X O]
   def start
     puts 'Welcome to Tic Tac Toe'
-    puts '----------+-----------'
     puts 'player 1 what is your name?'
     player_one = gets.chomp
-
     puts " #{player_one} choose your symbol either X or O to play "
     symbol = gets.chomp
-    unless $game_symbols.include? symbol
+    unless @game_symbols.include? symbol
       puts 'Only enter X or O'
       puts " #{player_one} choose your symbol either X or O to play "
       symbol = gets.chomp.upcase
     end
 
-    $game_symbols.delete(symbol)
+    @game_symbols.delete(symbol)
     puts 'player 2 what is your name?'
     player_two = gets.chomp
-    symbol_two = $game_symbols[0]
+    symbol_two = @game_symbols[0]
     puts "#{player_two} your symbol is #{symbol_two}"
     puts ''
 
@@ -37,16 +33,16 @@ class Game
   def turn(player)
     puts "#{player.name} pick a box to mark"
     pick = gets.chomp
-    cell = pick.to_i-1
-    #check if the cell is occupied 
-    if @board.field[cell] == "X" || @board.field[cell] == "O" || pick.length != 1 || !pick[/[1-9]/]
-        puts "Invalid Cell"
-        self.turn(player)
+    cell = pick.to_i - 1
+    # check if the cell is occupied
+    if @board.field[cell] == 'X' || @board.field[cell] == 'O' || pick.length != 1 || !pick[/[1-9]/]
+      puts 'Invalid Cell'
+      turn(player)
     else
-        @board.field[cell] =player.symbol
-        @board.show
+      @board.field[cell] = player.symbol
+      @board.show
     end
-end
+  end
 
   def game_over
     case @board.winner
@@ -70,14 +66,14 @@ end
 
   def play_again
     puts 'Do you wanna play again... Yes or No ??'
-    valid_yes_answers = ["YES","Y"]
-    valid_no_answers = ["NO","N"]
+    valid_yes_answers = %w[YES Y]
+    valid_no_answers = %w[NO N]
     answer = gets.chomp.upcase
-    until valid_yes_answers.any? { |item| item == answer} || valid_no_answers.any? { |item| item == answer}
-      puts "Answer yes or no please!"
+    until valid_yes_answers.any? { |item| item == answer } || valid_no_answers.any? { |item| item == answer }
+      puts 'Answer yes or no please!'
       answer = gets.chomp.upcase
     end
-    Game.new.play if valid_yes_answers.any? { |item| item == answer}
+    Game.new.play if valid_yes_answers.any? { |item| item == answer }
   end
 
   def play
@@ -90,7 +86,3 @@ end
   end
 end
 Game.new.play
-
-# rubocop:enable Style/GlobalVars
-# rubocop:enable Metrics/MethodLength
-# rubocop:enable Naming/VariableNumber

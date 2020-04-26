@@ -1,5 +1,3 @@
-# rubocop:disable Style/MultipleComparison
-
 class Board
   attr_accessor :field
 
@@ -33,5 +31,3 @@ class Board
     false
   end
 end
-
-# rubocop:enable Style/MultipleComparison
