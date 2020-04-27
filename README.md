@@ -2,9 +2,10 @@
 The goal of this game is to get 3 of the same symbol (either X or O) to align uninterrupted by another symbol either vertically, horizontally or diagonally on the board in order to win as shown below.
 ![Possible X win](screenshots/win18.png)
 ![Possible X win](screenshots/win25.png)
-![Possible X win](screenshots/win35.png)
 
+![Possible X win](screenshots/win35.png)
 ![Possible O win](screenshots/win45.png)
+
 ![Possible O win](screenshots/win53.png)
 ![Possible O win](screenshots/win59.png)
 
@@ -13,11 +14,23 @@ The user interface of the game looks like this:
 Step 1 : Start the game by typing bin/main.rb in terminal
 ![Start of the game](screenshots/ui15.png)
 
-Step 2: Key in the names of just two players choosing either X or O symbols to play
+Step 2: The first player inputs name and chooses either X or O symbols to play
 ![Players give their names](screenshots/ui29.png)
 
-Step 3: For each player, just key in the box number of where you want to place your symbol.
+Step 3: The second player inputs name and automatically gets a symbol either X or O different from first players symbol
+![Players give their names](screenshots/ui29.png)
+
+Step 4: The first player should key in the particular box number of where to place your symbol to play and wait for other player to play.
+![Winner is determined](screenshots/ui50.png)
+
+Step 5: The second player should key in the particular box number of where to place your symbol to play.
 Continue until prompted a winner or a draw!
+![Winner is determined](screenshots/ui50.png)
+
+Step 6: The first player can play again. This continues until a player wins or game ends as a draw!
+![Winner is determined](screenshots/ui50.png)
+
+Step 7: If players want to play again the should input Yes or Y, if not thanks for playing.
 ![Winner is determined](screenshots/ui50.png)
 
 ## Built With
