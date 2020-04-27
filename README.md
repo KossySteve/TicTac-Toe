@@ -1,5 +1,5 @@
 # Tic-Tac-Toe Game
-The goal of this game is to get your symbol (either X or O) to align either vertically, horizontally or diagonally in order to win as shown below.
+The goal of this game is to get 3 of the same symbol (either X or O) to align uninterrupted by another symbol either vertically, horizontally or diagonally on the board in order to win as shown below.
 ![Possible X win](screenshots/win18.png)
 ![Possible X win](screenshots/win25.png)
 ![Possible X win](screenshots/win35.png)
@@ -12,7 +12,7 @@ The user interface of the game looks like this:
 
 Step 1 : Start the game by typing bin/main.rb in terminal
 ![Start of the game](screenshots/ui15.png)
-Step 2: Key in the names of the players
+Step 2: Key in the names of just two players choosing either X or O symbols to play
 ![Players give their names](screenshots/ui29.png)
 Step 3: For each player, just key in the box number of where you want to place your symbol.
 Continue until prompted a winner or a draw!
