@@ -9,9 +9,13 @@ def start
   @game_symbols = %w[X O]
   puts 'player 1 what is your name?'
   pl_one = gets.chomp
+  while pl_one.strip.empty?
+    puts "Cannot be empty, please key in your name again"
+    pl_one = gets.chomp
+  end
   puts " #{pl_one} choose your symbol either X or O to play "
-  symbol = gets.chomp
-  unless @game_symbols.include? symbol
+  symbol = gets.chomp.upcase
+  until @game_symbols.include? symbol
     puts 'Only enter X or O'
     puts "#{pl_one} choose your symbol either X or O to play "
     symbol = gets.chomp.upcase
@@ -19,6 +23,10 @@ def start
   @game_symbols.delete(symbol)
   puts 'player 2 what is your name?'
   pl_two = gets.chomp
+  while pl_two.strip.empty?
+    puts "Cannot be empty, please key in your name again"
+    pl_two = gets.chomp
+  end
   symbol_two = @game_symbols[0]
   puts "#{pl_two} your symbol is #{symbol_two}"
   @players = { pl_one => symbol, pl_two => symbol_two }
