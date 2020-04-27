@@ -12,8 +12,10 @@ The user interface of the game looks like this:
 
 Step 1 : Start the game by typing bin/main.rb in terminal
 ![Start of the game](screenshots/ui15.png)
+
 Step 2: Key in the names of just two players choosing either X or O symbols to play
 ![Players give their names](screenshots/ui29.png)
+
 Step 3: For each player, just key in the box number of where you want to place your symbol.
 Continue until prompted a winner or a draw!
 ![Winner is determined](screenshots/ui50.png)
