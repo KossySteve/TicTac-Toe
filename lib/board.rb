@@ -3,10 +3,10 @@ class Board
 
   def initialize
     @field = [
-      1,2,3,
-      4,5,6,
-      7,8,9
-      
+      1, 2, 3,
+      4, 5, 6,
+      7, 8, 9
+
     ]
   end
 
@@ -33,4 +33,3 @@ class Board
     false
   end
 end
-
