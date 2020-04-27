@@ -4,7 +4,6 @@ require './lib/player.rb'
 require './lib/board.rb'
 require './bin/main.rb'
 
-
 class Game
   def game_over
     case @board.winner
@@ -18,6 +17,7 @@ class Game
     end
     play_again
   end
+
   def play
     start
     until @board.winner or @board.full?

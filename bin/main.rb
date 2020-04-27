@@ -4,16 +4,16 @@ require './lib/player.rb'
 require './lib/board.rb'
 require './lib/game.rb'
 
+puts 'Welcome to Tic Tac Toe'
 def start
   @game_symbols = %w[X O]
-  puts 'Welcome to Tic Tac Toe'
   puts 'player 1 what is your name?'
   pl_one = gets.chomp
   puts " #{pl_one} choose your symbol either X or O to play "
   symbol = gets.chomp
   unless @game_symbols.include? symbol
     puts 'Only enter X or O'
-    puts " #{pl_one} choose your symbol either X or O to play "
+    puts "#{pl_one} choose your symbol either X or O to play "
     symbol = gets.chomp.upcase
   end
   @game_symbols.delete(symbol)
@@ -44,7 +44,7 @@ def turn(player)
   end
 end
 
-# play again method 
+# play again method
 def play_again
   puts 'Do you wanna play again... Yes or No ??'
   valid_yes_answers = %w[YES Y]
