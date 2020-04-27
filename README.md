@@ -9,33 +9,48 @@ The goal of this game is to get 3 of the same symbol (either X or O) to align un
 ![Possible O win](screenshots/win53.png)
 ![Possible O win](screenshots/win59.png)
 
-The user interface of the game looks like this:
-
+# How To Play?
 Step 1 : Start the game by typing bin/main.rb in terminal
-![Start of the game](screenshots/ui15.png)
 
 Step 2: The first player inputs name and chooses either X or O symbols to play
-![Players give their names](screenshots/ui29.png)
 
-Step 3: The second player inputs name and automatically gets a symbol either X or O different from first players symbol
-![Players give their names](screenshots/ui29.png)
+Step 3: The second player inputs name and automatically gets a symbol either X or O different from first player's symbol
 
-Step 4: The first player should key in the particular box number of where to place your symbol to play and wait for other player to play.
-![Winner is determined](screenshots/ui50.png)
+Step 4: The first player should key in the particular box number to place your symbol to play and wait for second player to play.
 
-Step 5: The second player should key in the particular box number of where to place your symbol to play.
-Continue until prompted a winner or a draw!
-![Winner is determined](screenshots/ui50.png)
+Step 5: The second player should key in the particular box number to place your symbol to play.
 
 Step 6: The first player can play again. This continues until a player wins or game ends as a draw!
-![Winner is determined](screenshots/ui50.png)
 
 Step 7: If players want to play again the should input Yes or Y, if not thanks for playing.
+
+
+The user interface of the game looks like this:
+
+Step 1 :
+![Start of the game](screenshots/ui15.png)
+
+Step 2: 
+![Players give their names](screenshots/ui29.png)
+
+Step 3: 
+![Players give their names](screenshots/ui29.png)
+
+Step 4: 
+![Winner is determined](screenshots/ui50.png)
+
+Step 5: 
+
+![Winner is determined](screenshots/ui50.png)
+
+Step 6: 
+![Winner is determined](screenshots/ui50.png)
+
+Step 7: 
 ![Winner is determined](screenshots/ui50.png)
 
 ## Built With
 - Ruby
-
 
 ## Live Demo
 [![Run on Repl.it](https://repl.it/badge/github/KossySteve/TicTac-Toe)](https://repl.it/github/KossySteve/TicTac-Toe)
