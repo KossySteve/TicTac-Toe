@@ -3,9 +3,9 @@ class Board
 
   def initialize
     @field = [
-      1, 2, 3,
-      4, 5, 6,
-      7, 8, 9
+      "X","O","X",
+      "X","O","X",
+      "X","O","X"
     ]
   end
 
@@ -19,7 +19,8 @@ class Board
   end
 
   def full?
-    @field.all? { |cell| cell == 'X' or cell == 'O' }
+    possible_values = %w[X O]
+    @field.all? { |cell| possible_values.include?(cell) }
   end
 
   def winner
@@ -31,3 +32,5 @@ class Board
     false
   end
 end
+
+p Board.new.full?

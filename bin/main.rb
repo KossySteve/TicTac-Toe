@@ -8,24 +8,24 @@ class Game
   def start
     puts 'Welcome to Tic Tac Toe'
     puts 'player 1 what is your name?'
-    player_one = gets.chomp
-    puts " #{player_one} choose your symbol either X or O to play "
+    pl_one = gets.chomp
+    puts " #{pl_one} choose your symbol either X or O to play "
     symbol = gets.chomp
     unless @game_symbols.include? symbol
       puts 'Only enter X or O'
-      puts " #{player_one} choose your symbol either X or O to play "
+      puts " #{pl_one} choose your symbol either X or O to play "
       symbol = gets.chomp.upcase
     end
 
     @game_symbols.delete(symbol)
     puts 'player 2 what is your name?'
-    player_two = gets.chomp
+    pl_two = gets.chomp
     symbol_two = @game_symbols[0]
-    puts "#{player_two} your symbol is #{symbol_two}"
+    puts "#{pl_two} your symbol is #{symbol_two}"
     puts ''
 
-    @player_1 = Player.new(player_one, symbol)
-    @player_2 = Player.new(player_two, symbol_two)
+    @player_one = Player.new(pl_one, symbol)
+    @player_two = Player.new(pl_two, symbol_two)
     @board = Board.new
     @board.show
   end
@@ -47,16 +47,16 @@ class Game
   def game_over
     case @board.winner
     when 'X'
-      if @player_1.symbol == 'X'
-        puts "#{@player_1.name} wins!!!"
+      if @player_one.symbol == 'X'
+        puts "#{@player_one.name} wins!!!"
       else
-        puts "#{@player_2.name} wins!!!"
+        puts "#{@player_two.name} wins!!!"
       end
     when 'O'
-      if @player_1.symbol == 'O'
-        puts "#{@player_1.name} wins!!!"
+      if @player_one.symbol == 'O'
+        puts "#{@player_one.name} wins!!!"
       else
-        puts "#{@player_2.name} wins!!!"
+        puts "#{@player_two.name} wins!!!"
       end
     else
       puts 'It is a draw !!!'
@@ -79,8 +79,8 @@ class Game
   def play
     start
     until @board.winner or @board.full?
-      turn(@player_1)
-      turn(@player_2)
+      turn(@player_one)
+      turn(@player_two)
     end
     game_over
   end
