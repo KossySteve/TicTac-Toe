@@ -18,6 +18,7 @@ class Game
       @board.show
     end
   end
+
   def game_over
     case @board.winner
     when 'X'

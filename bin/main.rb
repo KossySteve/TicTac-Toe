@@ -38,8 +38,6 @@ def start
   @board.show
 end
 
-
-
 # play again method
 def play_again
   puts 'Do you wanna play again... Yes or No ??'
