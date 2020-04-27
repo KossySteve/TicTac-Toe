@@ -4,24 +4,26 @@ require './lib/player.rb'
 require './lib/board.rb'
 
 class Game
-  @game_symbols = %w[X O]
+  @@game_symbols = %w[X O]
   def start
     puts 'Welcome to Tic Tac Toe'
     puts 'player 1 what is your name?'
     pl_one = gets.chomp
     puts " #{pl_one} choose your symbol either X or O to play "
     symbol = gets.chomp
-    unless @game_symbols.include? symbol
+    unless @@game_symbols.include? symbol
       puts 'Only enter X or O'
       puts " #{pl_one} choose your symbol either X or O to play "
       symbol = gets.chomp.upcase
     end
+    
 
-    @game_symbols.delete(symbol)
+    @@game_symbols.delete(symbol)
     puts 'player 2 what is your name?'
     pl_two = gets.chomp
-    symbol_two = @game_symbols[0]
+    symbol_two = @@game_symbols[0]
     puts "#{pl_two} your symbol is #{symbol_two}"
+    @players = {pl_one => symbol,pl_two => symbol_two}
     puts ''
 
     @player_one = Player.new(pl_one, symbol)
@@ -47,17 +49,10 @@ class Game
   def game_over
     case @board.winner
     when 'X'
-      if @player_one.symbol == 'X'
-        puts "#{@player_one.name} wins!!!"
-      else
-        puts "#{@player_two.name} wins!!!"
-      end
+      puts "#{@players.key('X')} wins"
+      
     when 'O'
-      if @player_one.symbol == 'O'
-        puts "#{@player_one.name} wins!!!"
-      else
-        puts "#{@player_two.name} wins!!!"
-      end
+      puts "#{@players.key('O')} wins"
     else
       puts 'It is a draw !!!'
     end
@@ -80,6 +75,7 @@ class Game
     start
     until @board.winner or @board.full?
       turn(@player_one)
+      break if @board.winner or @board.full?
       turn(@player_two)
     end
     game_over

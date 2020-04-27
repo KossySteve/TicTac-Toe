@@ -3,9 +3,10 @@ class Board
 
   def initialize
     @field = [
-      "X","O","X",
-      "X","O","X",
-      "X","O","X"
+      1,2,3,
+      4,5,6,
+      7,8,9
+      
     ]
   end
 
@@ -33,4 +34,3 @@ class Board
   end
 end
 
-p Board.new.full?
