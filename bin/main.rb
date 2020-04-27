@@ -10,7 +10,7 @@ def start
   puts 'player 1 what is your name?'
   pl_one = gets.chomp
   while pl_one.strip.empty?
-    puts "Cannot be empty, please key in your name again"
+    puts 'Cannot be empty, please key in your name again'
     pl_one = gets.chomp
   end
   puts " #{pl_one} choose your symbol either X or O to play "
@@ -24,7 +24,7 @@ def start
   puts 'player 2 what is your name?'
   pl_two = gets.chomp
   while pl_two.strip.empty?
-    puts "Cannot be empty, please key in your name again"
+    puts 'Cannot be empty, please key in your name again'
     pl_two = gets.chomp
   end
   symbol_two = @game_symbols[0]
@@ -38,19 +38,7 @@ def start
   @board.show
 end
 
-def turn(player)
-  puts "#{player.name} pick a box to mark"
-  pick = gets.chomp
-  cell = pick.to_i - 1
-  # check if the cell is occupied
-  if @board.field[cell] == 'X' || @board.field[cell] == 'O' || pick.length != 1 || !pick[/[1-9]/]
-    puts 'Invalid Cell'
-    turn(player)
-  else
-    @board.field[cell] = player.symbol
-    @board.show
-  end
-end
+
 
 # play again method
 def play_again

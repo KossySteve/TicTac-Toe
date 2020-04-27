@@ -32,4 +32,5 @@ class Board
     end
     false
   end
+  
 end
