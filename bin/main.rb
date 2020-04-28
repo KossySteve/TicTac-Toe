@@ -50,3 +50,30 @@ def play_again
   end
   Game.new.play if valid_yes_answers.any? { |item| item == answer }
 end
+
+def turn(player)
+  puts "#{player.name} pick a box to mark"
+  pick = gets.chomp
+  cell = pick.to_i - 1
+  # check if the cell is occupied
+  if @board.field[cell] == 'X' || @board.field[cell] == 'O' || pick.length != 1 || !pick[/[1-9]/]
+    puts 'Invalid Cell'
+    turn(player)
+  else
+    @board.field[cell] = player.symbol
+    @board.show
+  end
+end
+
+def game_over
+  case @board.winner
+  when 'X'
+    puts "#{@players.key('X')} wins"
+
+  when 'O'
+    puts "#{@players.key('O')} wins"
+  else
+    puts 'It is a draw !!!'
+  end
+  play_again
+end
