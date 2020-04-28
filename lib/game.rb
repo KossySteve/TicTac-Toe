@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require './lib/player.rb'
-require './lib/board.rb'
+require_relative 'player.rb'
+require_relative 'board.rb'
 require './bin/main.rb'
 
 class Game
