@@ -1,23 +1,10 @@
 #!/usr/bin/env ruby
 
-require './lib/player.rb'
-require './lib/board.rb'
+require_relative 'player.rb'
+require_relative 'board.rb'
 require './bin/main.rb'
 
 class Game
-  def game_over
-    case @board.winner
-    when 'X'
-      puts "#{@players.key('X')} wins"
-
-    when 'O'
-      puts "#{@players.key('O')} wins"
-    else
-      puts 'It is a draw !!!'
-    end
-    play_again
-  end
-
   def play
     start
     until @board.winner or @board.full?
