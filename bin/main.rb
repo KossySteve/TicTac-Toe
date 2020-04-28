@@ -1,47 +1,58 @@
 #!/usr/bin/env ruby
-# rubocop:disable Style/Next
 
-puts 'Welcome to the game of Tic Tac Toe!!'
-puts 'Player 1 what is your name?'
-player1 = gets.chomp
-puts "Welcome #{player1} choose your game symbol: X or O"
-player_1_symbol = gets.chomp
-# player 1 chooses "X or O"
-puts "Ok #{player1} you will be playing with #{player_1_symbol} as your symbol"
-puts 'Player 2 what is your name?'
-player2 = gets.chomp
-puts "Welcome #{player2} choose your game symbol"
-player_2_symbol = gets.chomp
-# player 2 chooses "O or X"
-puts "Ok #{player2} you will be playing with #{player_2_symbol} as your symbol"
+require './lib/player.rb'
+require './lib/board.rb'
+require './lib/game.rb'
 
-# Display board
-puts '___1_|__2__|__3__'
-puts '___4_|__5__|__6__'
-puts '___7_|__8__|__9__'
+puts 'Welcome to Tic Tac Toe'
+def start
+  @game_symbols = %w[X O]
+  puts 'player 1 what is your name?'
+  pl_one = gets.chomp
+  puts " #{pl_one} choose your symbol either X or O to play "
+  symbol = gets.chomp
+  unless @game_symbols.include? symbol
+    puts 'Only enter X or O'
+    puts "#{pl_one} choose your symbol either X or O to play "
+    symbol = gets.chomp.upcase
+  end
+  @game_symbols.delete(symbol)
+  puts 'player 2 what is your name?'
+  pl_two = gets.chomp
+  symbol_two = @game_symbols[0]
+  puts "#{pl_two} your symbol is #{symbol_two}"
+  @players = { pl_one => symbol, pl_two => symbol_two }
+  puts ''
 
-# Start playing
-game_on = true
-while game_on
-  puts "player1 choose any of the numbered positions from 1 to 9 that hasn't been played on to play #{player_1_symbol}"
-  gets.chomp
-  # Player 1 will play
-  puts 'X or O' # at chosen position
-  puts "player2 choose any of the numbered positions from 1 to 9 that hasn't been played on to play #{player_2_symbol}"
-  gets.chomp
-  # Player 2 will play
-  puts 'O or X' # at chosen position
-  puts "player1 choose any of the numbered positions from 1 to 9 to play #{player_1_symbol}"
-  gets.chomp
-  # Player 1 will play
-  puts 'X or O' # at chosen position
-  if winner || draw
-    puts 'Its a draw~! or player1 wins! or player2 wins!'
-    game_on = false
-    puts 'Game Over'
+  @player_one = Player.new(pl_one, symbol)
+  @player_two = Player.new(pl_two, symbol_two)
+  @board = Board.new
+  @board.show
+end
+
+def turn(player)
+  puts "#{player.name} pick a box to mark"
+  pick = gets.chomp
+  cell = pick.to_i - 1
+  # check if the cell is occupied
+  if @board.field[cell] == 'X' || @board.field[cell] == 'O' || pick.length != 1 || !pick[/[1-9]/]
+    puts 'Invalid Cell'
+    turn(player)
+  else
+    @board.field[cell] = player.symbol
+    @board.show
   end
 end
-# To start game again
-puts 'Do you want to play again?'
 
-# rubocop:enable Style/Next
+# play again method
+def play_again
+  puts 'Do you wanna play again... Yes or No ??'
+  valid_yes_answers = %w[YES Y]
+  valid_no_answers = %w[NO N]
+  answer = gets.chomp.upcase
+  until valid_yes_answers.any? { |item| item == answer } || valid_no_answers.any? { |item| item == answer }
+    puts 'Answer yes or no please!'
+    answer = gets.chomp.upcase
+  end
+  Game.new.play if valid_yes_answers.any? { |item| item == answer }
+end
