@@ -5,9 +5,6 @@ require_relative 'board.rb'
 require './bin/main.rb'
 
 class Game
-  
-  
-
   def play
     start
     until @board.winner or @board.full?
