@@ -3,6 +3,9 @@
 require './lib/player.rb'
 require './lib/board.rb'
 require './lib/game.rb'
+require 'colorize'
+
+module Main
 
 puts 'Welcome to Tic Tac Toe'
 def start
@@ -68,12 +71,13 @@ end
 def game_over
   case @board.winner
   when 'X'
-    puts "#{@players.key('X')} wins"
+    puts "#{@players.key('X')} wins".red
 
   when 'O'
-    puts "#{@players.key('O')} wins"
+    puts "#{@players.key('O')} wins".red
   else
-    puts 'It is a draw !!!'
+    puts 'It is a draw !!!'.red
   end
-  play_again
+  return play_again
+end
 end
