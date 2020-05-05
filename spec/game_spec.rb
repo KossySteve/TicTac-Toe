@@ -31,14 +31,14 @@ describe Game do
       expect(game).to receive(:play)
       game.play
     end
-    it "doesnot return game_over until there's a winner or draw" do
-      game = Game.new
-      expect(game).not_to receive(:game_over)
-    end
     it "return game_over when there's a winner " do
       game = Game.new
-      game.winner = true
-      expect(game).to respond_to(:game_over)
+      board = Board.new
+      expect(game.play).to eql(:game_over) if board.winner == 'X'
+    end
+    it "responds to Main methods" do
+      game = Game.new
+      expect(game).to respond_to(:turn, :play_again, :start, :game_over)
     end
   end
 end
