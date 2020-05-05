@@ -16,4 +16,4 @@ class Game
     game_over
   end
 end
-Game.new.play
+# Game.new.play

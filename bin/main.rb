@@ -5,6 +5,7 @@ require './lib/board.rb'
 require './lib/game.rb'
 
 puts 'Welcome to Tic Tac Toe'
+
 def start
   @game_symbols = %w[X O]
   puts 'player 1 what is your name?'
@@ -32,11 +33,12 @@ def start
   @players = { pl_one => symbol, pl_two => symbol_two }
   puts ''
 
-  @player_one = Player.new(pl_one, symbol)
-  @player_two = Player.new(pl_two, symbol_two)
+  @player_one = create_player(pl_one, symbol)
+  @player_two = create_player(pl_two, symbol_two)
   @board = Board.new
   @board.show
 end
+
 
 # play again method
 def play_again

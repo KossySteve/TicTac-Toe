@@ -6,3 +6,6 @@ class Player
     @symbol = symbol
   end
 end
+def create_player(name,symbol)
+  Player.new(name,symbol)
+end
