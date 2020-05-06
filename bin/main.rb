@@ -21,6 +21,7 @@ def start
     puts "#{pl_one} choose your symbol either X or O to play "
     symbol = gets.chomp.upcase
   end
+  @player_one = create_player(pl_one, symbol)
   @game_symbols.delete(symbol)
   puts 'player 2 what is your name?'
   pl_two = gets.chomp
@@ -32,8 +33,6 @@ def start
   puts "#{pl_two} your symbol is #{symbol_two}"
   @players = { pl_one => symbol, pl_two => symbol_two }
   puts ''
-
-  @player_one = create_player(pl_one, symbol)
   @player_two = create_player(pl_two, symbol_two)
   @board = Board.new
   @board.show

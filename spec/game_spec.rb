@@ -8,6 +8,7 @@ RSpec.describe do
     let (:board) { Board.new }
     let (:game) { Game.new}
     
+    
   end
   describe 'Player' do
     it 'creates instance with name of player correctly' do
@@ -18,6 +19,11 @@ RSpec.describe do
       b =  create_player("Joseph","X")
       expect(b.symbol).to eq("X")
     end
+    it 'raises error when name is given as integer' do
+      
+      expect{create_player('90','X')}.to raise_error(ArgumentError,'Name can\'t be an Integer')
+    end
+    
   end
   describe 'Board' do
     let (:board) {Board.new}
@@ -117,6 +123,11 @@ RSpec.describe do
       expect(board.winner).to eq(false)
     end
 
+
+  end
+  describe 'Interface' do
+    
+    
 
   end
   
