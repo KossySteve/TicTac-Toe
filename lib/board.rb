@@ -10,7 +10,7 @@ class Board
   end
 
   def show
-    puts ""
+    puts ''
     puts "    #{@field[0]} | #{@field[1]} | #{@field[2]}"
     puts '    --+---+---'
     puts "    #{@field[3]} | #{@field[4]} | #{@field[5]}"
