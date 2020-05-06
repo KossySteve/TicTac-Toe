@@ -129,5 +129,4 @@ RSpec.describe do
       expect(board.winner).to eq(false)
     end
   end
-  
 end
