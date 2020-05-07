@@ -92,7 +92,7 @@ RSpec.describe do
       expect(board.winner).to eq('O')
     end
 
-    # 258
+
     it 'shows winner is X when X is aligned diagonally' do
       board.field = [
         '', '', 'X',
@@ -102,7 +102,7 @@ RSpec.describe do
       expect(board.winner).to eq('X')
     end
 
-    # 246
+
     it 'shows winner is X when X is aligned on the third column' do
       board.field = [
         '', '', 'X',
@@ -111,7 +111,7 @@ RSpec.describe do
       ]
       expect(board.winner).to eq('X')
     end
-    # 048
+
     it 'shows winner is O when O is aligned diagonally' do
       board.field = [
         'O', '', '',
