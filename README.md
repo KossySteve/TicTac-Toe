@@ -1,5 +1,6 @@
 # TicTac-Toe Game test
 This is a microverse project which involves testing the tic-tac-toe game using Rspec. It entails carrying out unit test to ascertain if the winning conditions, game classes and methods work adequately.
+
 The goal of this game is to get 3 of the same symbol (either X or O) to align uninterrupted by another symbol either vertically, horizontally or diagonally on the board in order to win as shown below.
 
 ## Built With
