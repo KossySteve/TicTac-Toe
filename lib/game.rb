@@ -1,10 +1,12 @@
 #!/usr/bin/env ruby
 
-require_relative 'player.rb'
-require_relative 'board.rb'
+require './lib/player.rb'
+require './lib/board.rb'
+require './lib/game.rb'
 require './bin/main.rb'
 
 class Game
+  include Main
   def play
     start
     until @board.winner or @board.full?
@@ -16,4 +18,4 @@ class Game
     game_over
   end
 end
-Game.new.play
+# Game.new.play
