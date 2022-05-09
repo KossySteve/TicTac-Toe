@@ -36,20 +36,24 @@ Step 2:
 
 ![Players give their names](screenshots/ui29.png)
 
-Step 3: 
+Step 3:
+
 ![Players give their names](screenshots/ui29.png)
 
-Step 4: 
+Step 4:
+
 ![Winner is determined](screenshots/ui50.png)
 
 Step 5: 
 
 ![Winner is determined](screenshots/ui50.png)
 
-Step 6: 
+Step 6:
+
 ![Winner is determined](screenshots/ui50.png)
 
-Step 7: 
+Step 7:
+
 ![Winner is determined](screenshots/ui50.png)
 
 ## Built With
