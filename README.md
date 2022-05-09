@@ -28,9 +28,11 @@ Step 7: If players want to play again the should input Yes or Y, if not thanks f
 The user interface of the game looks like this:
 
 Step 1 :
+
 ![Start of the game](screenshots/ui15.png)
 
-Step 2: 
+Step 2:
+
 ![Players give their names](screenshots/ui29.png)
 
 Step 3: 
@@ -68,7 +70,7 @@ Step 7:
 ***Kossy Steve***
 - Github: [@KossySteve](https://github.com/KossySteve)
 - Twitter: [@EzeSteve3](https://twitter.com/EzeSteve3/)
-- Linkedin: [linkedin](https://www.linkedin.com/in/kossy-steve/) 
+- Linkedin: [Kossy Steve](https://www.linkedin.com/in/kossy-steve/) 
 - Mail: kossyeze@gmail.com
 ## 🤝 Contributing
 
