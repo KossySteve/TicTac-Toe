@@ -1,5 +1,6 @@
 # Tic-Tac-Toe Game
 The goal of this game is to get 3 of the same symbol (either X or O) to align uninterrupted by another symbol either vertically, horizontally or diagonally on the board in order to win as shown below.
+
 ![Possible X win](screenshots/win18.png)
 ![Possible X win](screenshots/win25.png)
 
