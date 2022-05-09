@@ -68,7 +68,7 @@ Step 7:
 ***Kossy Steve***
 - Github: [@KossySteve](https://github.com/KossySteve)
 - Twitter: [@EzeSteve3](https://twitter.com/EzeSteve3/)
-- Linkedin: [linkedin](https://www.linkedin.com/in/steve-ez-b090ba198/) 
+- Linkedin: [linkedin](https://www.linkedin.com/in/kossy-steve/) 
 - Mail: kossyeze@gmail.com
 ## 🤝 Contributing
 
