@@ -29,7 +29,7 @@ Step 7: The first player can play again. This continues until a player wins or g
 
 Step 8: If players want to play again the should input Yes or Y, if not thanks for playing.
 
-Step 9: CLICK HERE TO PLAY!!! (https://repl.it/github/KossySteve/TicTac-Toe)
+Step 9: CLICK HERE TO PLAY!!! (https://replit.com/@kossySteve/TicTac-Toe-1#.replit)
 
 # In terminal?
 Step 1 : Start the game by typing bin/main.rb in terminal
