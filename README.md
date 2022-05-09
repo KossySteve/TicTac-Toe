@@ -1,5 +1,5 @@
 # Tic-Tac-Toe Game
-The goal of this game is to get 3 of the same symbol (either X or O) to align uninterrupted by another symbol either vertically, horizontally or diagonally on the board in order to win as shown below.
+This game is CLI application built with Ruby. The goal of this game is to get 3 of the same symbol (either X or O) to align uninterrupted by another symbol either vertically, horizontally or diagonally on the board in order to win as shown below.
 
 ![Possible X win](screenshots/win18.png)![Possible X win](screenshots/win25.png)
 
@@ -36,6 +36,7 @@ Step 1 : Start the game by typing bin/main.rb in terminal
 
 Next steps : same as steps 2 - 8 above
 
+# GAME UI?
 The user interface of the game looks like this:
 
 Step 1 :
