@@ -71,7 +71,7 @@ Step 7:
 - Ruby
 
 ## Live Demo
-[![Run on Repl.it](https://repl.it/badge/github/KossySteve/TicTac-Toe)](https://repl.it/github/KossySteve/TicTac-Toe)
+[![Run on Repl.it](https://repl.it/badge/github/KossySteve/TicTac-Toe)](https://replit.com/@kossySteve/TicTac-Toe-1#.replit)
 
 
 👤 **Authors**
