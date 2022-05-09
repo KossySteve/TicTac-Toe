@@ -13,7 +13,7 @@ The goal of this game is to get 3 of the same symbol (either X or O) to align un
 # How To Play?
 
 # On replit?
-Step 1: click the play link below
+Step 1: click the play link in step 9 below
 
 Step 2: click on the console tab
 
@@ -29,7 +29,7 @@ Step 7: The first player can play again. This continues until a player wins or g
 
 Step 8: If players want to play again the should input Yes or Y, if not thanks for playing.
 
-Step 9: CLICK!!! [HERE] (https://repl.it/badge/github/KossySteve/TicTac-Toe)](https://repl.it/github/KossySteve/TicTac-Toe)
+Step 9: CLICK HERE TO PLAY!!! (https://repl.it/badge/github/KossySteve/TicTac-Toe)](https://repl.it/github/KossySteve/TicTac-Toe)
 
 # In terminal?
 Step 1 : Start the game by typing bin/main.rb in terminal
