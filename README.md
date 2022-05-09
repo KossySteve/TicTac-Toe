@@ -11,20 +11,30 @@ The goal of this game is to get 3 of the same symbol (either X or O) to align un
 ![Possible O win](screenshots/win59.png)
 
 # How To Play?
+
+# On replit?
+Step 1: click the play link below
+
+Step 2: click on the console tab
+
+Step 3: The first player inputs name and chooses either X or O symbols to play
+
+Step 4: The second player inputs name and automatically gets a symbol either X or O different from first player's symbol
+
+Step 5: The first player should key in the particular box number to place your symbol to play and wait for second player to play.
+
+Step 6: The second player should key in the particular box number to place your symbol to play.
+
+Step 7: The first player can play again. This continues until a player wins or game ends as a draw!
+
+Step 8: If players want to play again the should input Yes or Y, if not thanks for playing.
+
+Step 9: CLICK!!! [HERE] (https://repl.it/badge/github/KossySteve/TicTac-Toe)](https://repl.it/github/KossySteve/TicTac-Toe)
+
+# In terminal?
 Step 1 : Start the game by typing bin/main.rb in terminal
 
-Step 2: The first player inputs name and chooses either X or O symbols to play
-
-Step 3: The second player inputs name and automatically gets a symbol either X or O different from first player's symbol
-
-Step 4: The first player should key in the particular box number to place your symbol to play and wait for second player to play.
-
-Step 5: The second player should key in the particular box number to place your symbol to play.
-
-Step 6: The first player can play again. This continues until a player wins or game ends as a draw!
-
-Step 7: If players want to play again the should input Yes or Y, if not thanks for playing.
-
+Next steps : same as steps 2 - 8 above
 
 The user interface of the game looks like this:
 
